@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consigna 9 - Cuestionario</title>
+</head>
+<body>
+
+    <h1>Cuestionario de ejemplo</h1>
+
+    <form action="#" method="post">
+        
+        <!-- 1. Nombre (texto) -->
+        <p>
+            <label for="nombre">1. ¿Cuál es tu nombre?</label><br>
+            <input type="text" id="nombre" name="nombre">
+        </p>
+
+        <!-- 2. Correo electrónico -->
+        <p>
+            <label for="email">2. ¿Cuál es tu correo electrónico?</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+
+        <!-- 3. Edad (número) -->
+        <p>
+            <label for="edad">3. ¿Cuál es tu edad?</label><br>
+            <input type="number" id="edad" name="edad" min="0">
+        </p>
+
+        <!-- 4. Fecha de nacimiento -->
+        <p>
+            <label for="fecha">4. ¿Cuál es tu fecha de nacimiento?</label><br>
+            <input type="date" id="fecha" name="fecha">
+        </p>
+
+        <!-- 5. Género (radio) -->
+        <p>
+            <label>5. ¿Con qué género te identificás?</label><br>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label><br>
+
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label>
+        </p>
+
+        <!-- 6. Intereses (checkbox) -->
+        <p>
+            <label>6. ¿Qué actividades te interesan?</label><br>
+            <input type="checkbox" id="deporte" name="intereses" value="deporte">
+            <label for="deporte">Deporte</label><br>
+
+            <input type="checkbox" id="musica" name="intereses" value="musica">
+            <label for="musica">Música</label><br>
+
+            <input type="checkbox" id="lectura" name="intereses" value="lectura">
+            <label for="lectura">Lectura</label>
+        </p>
+
+        <!-- 7. Nivel de satisfacción (range) -->
+        <p>
+            <label for="satisfaccion">7. ¿Qué tan satisfecho estás con este formulario? (1 a 10)</label><br>
+            <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10">
+        </p>
+
+        <!-- 8. Selección de país (select) -->
+        <p>
+            <label for="pais">8. ¿En qué país vivís?</label><br>
+            <select id="pais" name="pais">
+                <option value="">Seleccionar</option>
+                <option value="argentina">Argentina</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="chile">Chile</option>
+                <option value="otro">Otro</option>
+            </select>
+        </p>
+
+        <!-- 9. Comentarios (textarea) -->
+        <p>
+            <label for="comentarios">9. ¿Querés dejar algún comentario?</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+        </p>
+
+        <!-- 10. Contraseña -->
+        <p>
+            <label for="password">10. Ingresá una contraseña (solo como ejemplo):</label><br>
+            <input type="password" id="password" name="password">
+        </p>
+
+        <!-- Botón de envío -->
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+
+</body>
+</html>

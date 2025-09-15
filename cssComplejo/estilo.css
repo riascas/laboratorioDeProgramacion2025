@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;  /* Fuente limpia y legible */
+  margin: 0;                /* Elimina el margen por defecto del navegador */
+  padding: 0;               /* Elimina el padding por defecto del navegador */
+}
+
+h1 {
+ text-align: center;       /* Centra el título en la página */
+  margin: 20px 0;           /* Espacio vertical arriba y abajo del título */
+}
+
+.contenedor-textos {
+  display: flex;            /* Activa Flexbox: permite distribuir los textos en fila */
+  flex-direction: row;      /* Alinea los elementos hijos (los textos) en forma de fila (horizontal) */
+  flex-wrap: wrap;          /* Permite que los textos salten a la siguiente línea si no hay espacio suficiente */
+  justify-content: center; /* Centra los textos horizontalmente dentro del contenedor */
+  gap: 20px;                /* Espacio entre cada texto (como un margen interno entre ellos) */
+  padding: 20px;            /* Espacio interno entre el borde del contenedor y los textos */
+}
+
+.texto {
+flex: 1;                  /* Cada texto se expande para ocupar el espacio disponible proporcionalmente */
+  min-width: 300px;         /* Ancho mínimo que puede tener un bloque de texto (evita que se vuelva muy angosto) */
+  max-width: 400px;         /* Ancho máximo para mantener buena legibilidad en pantallas grandes */
+  background-color: #f0f0f0;/* Color de fondo gris claro para distinguir los textos del fondo */
+  padding: 15px;            /* Espacio interno entre el contenido del texto y su borde */
+  box-sizing: border-box;   /* Hace que el padding se incluya dentro del ancho total del elemento */
+}
+
+/* ======== MEDIA QUERY PARA DISPOSITIVOS PEQUEÑOS ======== */
+/* Se aplica cuando el ancho de la pantalla es de 640px o menos */
+
+@media (max-width: 640px) {
+  .contenedor-textos {
+    flex-direction: column; /* Cambia la dirección de los textos: ahora se apilan uno debajo del otro */
+    align-items: center;    /* Centra cada texto individualmente dentro del contenedor */
+  }
+}
+

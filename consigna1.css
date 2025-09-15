@@ -1,0 +1,105 @@
+/*ejercicio 1*/
+h1 {
+    text-align: right;
+}
+
+/*ejercicio 2*/
+.letra1 {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+/*ejercicio 3*/
+p {
+    margin-left: 20px;
+}
+
+/*ejercicio 4 - Parrafos con clase destacados*/
+.destacado {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 50px;
+}
+
+/*ejercicio 5 A - Enlaces con color amarilla cuando el enlace
+no ha sido seleccionado aún*/
+a:visited {
+   color:yellow;
+}
+
+/*ejercicio 5 B - Enlaces con color rojo cuando el cursor del
+ ratón se sitúe encima de ellos */
+ a:hover {
+   color:red;
+}
+
+/*ejercicio 5 C - Enlaces con color verde cuando el enlace
+ha sido seleccionado */
+ a:hover {
+   color:green;
+}
+
+/*ejercicio 6 el elemento con id “tableUsuarios” posea un
+ border con valor 2px y 5px de
+padding.*/
+#tableUsuarios{
+    border: 20px;
+    padding: 50px;
+}
+
+/*ejercicio 7 Todos los <h1>, <h2>y <h3> aparezcan en color negro*/
+
+h1,h2,h3 {
+    color: yellow;
+}
+
+/*ejercicio 8  todos los enlaces que se abren en una nueva 
+pestaña/ventana tengan como fuente el valor “Arial” y 
+como style de fuente tengan definido “italic”.
+Preguntar a los profes*/
+
+
+/*ejercicio 9  todas las imágenes que contengan la clase “importante” 
+y que se encuentren dentro de un contenedor <div> con la clase 
+“destacado” aparezcan con opacity 0.9.
+El resto de las imágenes que se encuentren en un contenedor <div> con 
+la clase “destacado” deberán aparecer con opacity 0.5 */
+
+div.destacado img{
+    opacity:0.5
+}
+
+div.destacado img.importante {
+
+    opacity: 0.9
+
+}
+
+/*ejercicio 10 
+todos los párrafos que, inicialmente, cuenten con color amarillo, cambien su color
+a verde (animations) .*/
+
+p {
+  color: red;
+}
+
+div {
+  color: initial;
+}
+
+/*ejercicio 11
+todas las imágenes se visualicen con forma de círculo .*/
+
+div.img {
+  clip-path: circle(50%);
+}
+/*ejercicio 12
+el usuario pueda modificar el tamaño del elemento div con id “divPrueba .*/
+
+/*ejercicio 13
+… todos los inputs de tipo number se muestren en celeste (como color de fondo)
+cuando el usuario está completando el input.*/
+
+div.number{
+
+}
