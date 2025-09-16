@@ -1,0 +1,96 @@
+/* === Estilos base para todos los dispositivos === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.structForm {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* === Media query para iPhone 6/7/8 Plus === */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 414px) 
+  and (min-device-height: 736px) 
+  and (max-device-height: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+    body {
+        padding: 10px;
+        background-color: #e0f7fa;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 18px;
+    }
+}
