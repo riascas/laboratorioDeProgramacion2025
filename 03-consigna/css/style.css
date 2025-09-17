@@ -1,0 +1,169 @@
+/* style.css - Mobile first */
+/* VARIABLES: facilitan cambios globales */
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #b91c1c;
+  --max-width: 100vw;
+  --gap: 1rem;
+}
+
+/* RESET y base */
+*{ 
+    box-sizing: border-box; 
+}
+html,body{ 
+    height:100%; 
+}
+
+body{
+  margin:0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER: marca + menu */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee; /* separador visual */
+  /* flex-wrap permite que el nav baje debajo del h1 en pantallas muy pequeñas */
+  flex-wrap: wrap;
+}
+
+/* Título responsivo */
+header h1{
+  margin:0;
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem); /* escala según ancho */
+  line-height:1.1;
+}
+
+/* MENÚ: lista horizontal en desktop, centrada y apilada en móvil */
+.menu ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;             /* fila por defecto */
+  gap: 0.75rem;
+  align-items:center;
+}
+.menu a{
+  text-decoration:none;
+  color:var(--text);
+  padding:0.35rem 0.6rem;
+  border-radius:6px;
+  font-size:0.95rem;
+}
+.menu a:hover{
+  background:#f3f4f6;
+  color:var(--accent);
+}
+
+/* CONTENEDOR PRINCIPAL: centro y ancho máximo */
+main{
+  max-width: var(--max-width);
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 columna */
+  gap: 1.25rem;
+}
+
+/* Cada noticia - estilo base (mobile) */
+.noticia{
+  background: #fff;
+  padding: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  display:flex;
+  flex-direction: column; /* mobile: apilar imagen + texto */
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+/* Imagen: comportamiento responsivo y evitar overflow */
+.noticia img{
+  width: 100%;         /* en móvil, la imagen ocupa todo el ancho */
+  height: auto;
+  display:block;
+  border-radius:6px;
+  object-fit: cover;
+  max-height: 300px;   /* límite para imágenes muy altas */
+}
+
+/* Tipografía dentro de .noticia */
+.noticia h2{ margin:0 0 0.4rem 0; font-size:1.15rem; }
+.noticia p{ margin:0; color:var(--muted); font-size:0.98rem; }
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:1rem;
+  color:var(--muted);
+  border-top:1px solid #f0f0f0;
+  margin-top: 2rem;
+}
+
+/* ============================
+   BREAKPOINTS (tablet / desktop)
+   ============================ */
+
+/* Tablet (a partir de 640px): ajustes menores */
+@media (min-width: 640px) {
+  main{
+    gap: 1.5rem;
+  }
+  .menu a{ padding:0.45rem 0.8rem; }
+}
+
+/* Desktop pequeño / tablet landscape: mostrar las noticias en 2 columnas */
+@media (min-width: 768px) {
+  /* Mostrar dos secciones (noticias) lado a lado */
+  main{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Dentro de cada noticia, colocamos imagen + contenido en fila */
+  .noticia{
+    flex-direction: row;        /* imagen a la izquierda, texto a la derecha */
+    align-items: flex-start;
+  }
+  .noticia img{
+    width: 250px;               /* ancho fijo para columna de imagen */
+    flex: 0 0 250px;            /* no crecer ni encoger */
+    max-height: 160px;
+    margin-right: 1rem;
+  }
+  .noticia p{ color:#4b5563; }  /* texto un poco más oscuro en pantallas grandes */
+}
+
+/* Escritorio grande: mayor separación y tipografías */
+@media (min-width: 1024px) {
+  header{ padding:1.25rem 2rem; }
+  main{ padding: 0 2rem; }
+  .noticia img { width: 280px; flex:0 0 280px; max-height:180px; }
+  .noticia h2 { font-size: 1.2rem; }
+}
+
+/* Pequeños ajustes para pantallas muy estrechas (ej: 360px) */
+@media (max-width: 360px) {
+  header h1{ 
+    font-size: 1.05rem; 
+  }
+  .menu ul{ 
+    justify-content:center; 
+    gap:0.5rem; 
+    width:100%; 
+  }
+  .noticia { 
+    padding:0.7rem; 
+  }
+}

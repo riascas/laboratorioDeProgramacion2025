@@ -1,0 +1,152 @@
+/* === Estilos base para todos los dispositivos === */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;    
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 1em;
+}
+
+
+.structForm {
+  display: flex;
+  flex-flow: column wrap;   
+  padding: 0.5em;
+}
+
+.structForm label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1em;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+div.checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+div.checkbox input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+/* @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 414px) 
+  and (min-device-height: 736px) 
+  and (max-device-height: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+    body {
+        padding: 10px;
+        background-color: #e0f7fa;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 18px;
+    }
+} */
+
+@media only screen and (min-device-width: 736px) {
+    form.form-container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .structForm {
+        display: flex;
+        flex-direction: row;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 70%;
+        padding: 10px;
+        margin-top: 1em;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+    }
+
+    input[type="reset"] {
+        background-color: #dc3545;
+        color: white;
+    }
+}

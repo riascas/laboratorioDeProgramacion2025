@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <title>Diario 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css//style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Este es un formulario</h1>
+            <form class="form-container">
+                <div class="structForm">
+                    <label for="fname">Ingresar números</label>
+                    <input required type="number" id="fname" name="fname" placeholder="Ingresa un numero"/>
+                </div>
+
+                <div class="structForm">
+                    <label for="lname">Ingrese texto</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+
+                <div class="structForm">
+                    <label for="opciones">Selecciona un opción</label>
+                    <select name="opciones" id="opciones" required>
+                        <option value="">Elegi una opción</option>
+                        <option value="valor2">Opcion 2</option>
+                        <option value="valor3">Opcion 3</option>
+                        <option value="valor4">Opcion 4</option>
+                    </select>
+                </div>
+
+                <div class="structForm">
+                    <label for="fecha">Selecciona una fecha</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+
+                <div class="checkbox structForm">
+                    <label for="validar">Selecciona el check</label>
+                    <input type="checkbox" name="validar">
+                </div>
+
+                <div class="structForm">
+                    <label for="mensaje">Escribe tu mensaje</label>
+                    <textarea id="" for="mensaje" placeholder="Escribe aquí tu mensaje..." required>
+                    </textarea>
+                </div>
+
+                <div class="structForm">
+                    <input type="reset" id="" name="">
+                </div>
+            </form>
+    </main>
+
+</body>
+
+</html>
